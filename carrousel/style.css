@@ -1,0 +1,43 @@
+.img{
+    display: flex;
+    justify-content: center;
+}
+.inline{
+    display: inline;
+}
+.none{
+    display:none;
+}
+.white{
+    color:white;
+}
+ul{
+    top: 92%;
+    position: absolute;
+}
+.inline2{
+    display:flex;
+    justify-content: center;
+    
+}
+.img > img{
+    width: 75%;
+    border-radius:15%;
+
+}
+.button{
+    display: flex;
+    justify-content: space-between;
+}
+.button > button {
+    width: 100px;
+    height: 50px;
+    border-radius:35%;
+}
+body{
+    background-color: gray;
+}
+.text >p{
+    display:flex;
+    justify-content: center;
+}
