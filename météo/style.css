@@ -1,0 +1,35 @@
+body{
+    background-image: url("https://s.yimg.com/ny/api/res/1.2/NQkjl5Q08ofr5puz4ygyiQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTk2MDtoPTYwMDtjZj13ZWJw/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-12/bfab1f80-2827-11ea-bf3f-55cc38000efd");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    margin: auto;
+}
+.character-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.character-container> h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#temp , #finalWheather{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0rem 0rem 1rem 0rem;
+    color: black;
+}
+#temp{
+    font-size: 4rem;
+}
+.wheatherContainer > p{
+    display: flex;
+    justify-content: center;
+}
+.search {
+    margin: 10rem;
+}
