@@ -11,22 +11,12 @@ function fetchApi(lat,lon) {
     fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+key+"&lang=FR")
     .then(response => response.json())
     .then(data => {
-        getFrenchWeather(data.weather[0].description);
+        diplay(data.weather[0].description);
     })
     .catch(error=>{
         console.log("erreur : "+ error);
     })
     ;
-}
-
-function getFrenchWeather(wheather) {
-    let frenchReturn = "";
-    if(wheather === "clear sky") {
-        frenchReturn = "Ciel clair";
-    }
-    
-    return frenchReturn;
-
 }
 function ask (){
     let country = document.getElementById("ville").value;
