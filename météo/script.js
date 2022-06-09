@@ -28,15 +28,15 @@ function ask (){ // convertit la ville demandé en latitude et longitude
     })
     ;
 }
-function display (finalWheather,Temp,icon){
+function display (finalWheather,Temp,icon){ //affiche le temps et change le fond et l'icone du temps en fonction des data de l'api
     Temp= Math.round(Temp - 273.15)
     //console.log(finalWheather,);
     let displayTemp=Temp +"°";
     let displayWheather=finalWheather;
-    if ( icon == "01d" || icon == "01n"){
-        document.body.style.backgroundImage = "url(img/sun.jpg)";
-        document.getElementById("Temp").style.color= "white";
-        document.getElementById("finalWheather").style.color= "white";
+    if ( icon == "01d" || icon == "01n"){ //en fonction de l'icone le temps est verifié
+        document.body.style.backgroundImage = "url(img/sun.jpg)"; //background
+        document.getElementById("Temp").style.color= "white"; //temperature couleur
+        document.getElementById("finalWheather").style.color= "white"; //temps couleur
         document.getElementById('icon').innerHTML = '<img src="img/01d.png" />';
     }
     if (icon == "02d" || icon == "02n" ){ //peux nuageux
