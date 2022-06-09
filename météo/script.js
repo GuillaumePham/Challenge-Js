@@ -9,7 +9,7 @@ function fetchApi(lat,lon) { //fetch avec l'utilisation de l'api la météo n'es
     fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+key+"&lang=FR") //requetes a l'api via fetch
     .then(response => response.json()) //recup de donné brut
     .then(data => {
-        display(data.weather[0].description ,data.main.temp); //appelle la fonction pour afficher les données
+        display(data.weather[0].description ,data.main.temp,data.weather[0].icon); //appelle la fonction pour afficher les données
     })
     .catch(error=>{
         console.log("erreur : "+ error);
@@ -28,12 +28,48 @@ function ask (){ // convertit la ville demandé en latitude et longitude
     })
     ;
 }
-function display (finalWheather,Temp){
+function display (finalWheather,Temp,icon){
     Temp= Math.round(Temp - 273.15)
     //console.log(finalWheather,);
     let displayTemp=Temp +"°";
     let displayWheather=finalWheather;
+    if ( icon == "01d" || icon == "01n"){
+        document.body.style.backgroundImage = "url(img/sun.jpg)";
+        document.getElementById("Temp").style.color= "white";
+        document.getElementById("finalWheather").style.color= "white";
+        document.getElementById('icon').innerHTML = '<img src="img/01d.png" />';
+    }
+    if (icon == "02d" || icon == "02n" ){ //peux nuageux
+        document.body.style.backgroundImage = "url(img/tiny-cloud.jpg)";
+        document.getElementById("Temp").style.color= "white";
+        document.getElementById('icon').innerHTML = '<img src="img/02n.png" />';
+        document.getElementById("finalWheather").style.color= "white";
+    }
+    if (icon == "03n" || icon == "03d" || icon =="04d" || icon == "04n"){ // nuageux
+        document.getElementById('icon').innerHTML = '<img src="img/04d.png" />';
+        document.body.style.backgroundImage = "url(img/overcast.jpg)";
+        document.getElementById("Temp").style.color= "black";
+        document.getElementById("finalWheather").style.color= "black";
+    }
+    if (icon == "09n" || icon == "09d" || icon == "10n"|| icon == "10d" || icon== "50d" ||icon == "50n" ){ //pluie et brouillard
+        document.body.style.backgroundImage = "url(img/rain.jpg)";
+        document.getElementById("Temp").style.color= "black";
+        document.getElementById("finalWheather").style.color= "black";
+        document.getElementById('icon').innerHTML = '<img src="img/10d.png" />';
+    }
+    if (icon == "11n" || icon == "11d"){ //orage
+        document.body.style.backgroundImage = "url(img/thunder.jpg)";
+        document.getElementById("Temp").style.color= "black";
+        document.getElementById("finalWheather").style.color= "black";
+        document.getElementById('icon').innerHTML = '<img src="img/11d.png" />';
+    }
+    if (icon == "13n" || icon == "13d"){ //neige
+        document.body.style.backgroundImage = "url(img/snow.jpg)";
+        document.getElementById("Temp").style.color= "black";
+        document.getElementById("finalWheather").style.color= "black";
+        document.getElementById('icon').innerHTML = '<img src="img/13d.png" />';
+    }
     document.getElementById("Temp").innerHTML=displayTemp;
     document.getElementById("finalWheather").innerHTML=displayWheather;
-
+    
 }
