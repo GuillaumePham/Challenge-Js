@@ -1,7 +1,7 @@
-let img1 = document.getElementsByClassName("img");
-let button = document.getElementsByClassName("inline");
+let img1 = document.getElementsByClassName("img"); //recupere les images
+let button = document.getElementsByClassName("inline"); // les boutons
 let count = 0;
-    function lambda(){
+    function lambda(){ // change la couleur du bouton cliqué et l'image affiché par le carrousel
         for (let i = 0; i< img1.length; i++){
             img1[i].classList.add("none");
             button[i].classList.add("white");
@@ -9,9 +9,9 @@ let count = 0;
         button[count].classList.remove("white");
         img1[count].classList.remove("none");
     }
-    function left(){
+    function left(){ //bouton gauche gére le defilement de l'image si ce bouton est cliqué
         count--;
-        if (count<0){
+        if (count<0){ //chaque image a une nombre pour savoir ou en est
             count =9;
         }
         if (7){
@@ -20,7 +20,7 @@ let count = 0;
             }
         }
     }
-    function right(){
+    function right(){ //droit 
         count++;
         if (count > 9){
             count=0;
@@ -31,11 +31,11 @@ let count = 0;
                 }
             }
     }
-    function take(){
+    function take(){ // 1er boule noir
         count = 0;   
         lambda();  
     }
-    function take1(){
+    function take1(){ // 2 puis trois et ainsi de suite
         count = 1;   
         lambda();  
     }

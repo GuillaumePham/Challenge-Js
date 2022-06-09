@@ -1,4 +1,41 @@
-body{
-    background-image:url(mask.png);
-    background-repeat: no-repeat;
+
+
+body {
+   background-image: url(img/bg.jpg); 
+   background-size: cover;
+   overflow: hidden;
+   margin: 0 0 0 0;  
+}
+.mask {
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 100%;
+}
+.first {
+   background-image: url(img/seq-a.png);
+   width: 300px;  
+   height:390px; 
+   position:absolute;
+   left:10%;
+   top:50%;  
+   transform: translate(-50%,-50%);
+   overflow: hidden;
+   
+}
+.second {
+   background-image: url(img/seq-b.png);
+   top:55%;  
+   transform: translate(-50%,-50%);
+   overflow: hidden;
+   z-index: 300;
+   width: 200px;  
+   height: 250px; 
+   position:absolute;
+   right:0.5%;
+}
+
+.divided_background {
+   display: flex;
+   justify-content: center;
+
 }
