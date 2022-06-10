@@ -1,0 +1,123 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+.produit{
+    margin: 10rem;
+    display: flex;
+    justify-content: center;
+}
+#shop{
+    margin-right: auto;
+    margin-left: auto;
+    width: 50vw;
+    height: auto;
+    background-color: white;
+}
+
+.imgAirForce img{
+ width: 5rem;
+ height:5.4rem;
+}
+.imgAirForce{
+    width: 5.5rem;
+    height: 5.6rem;
+    border: 2px solid black;
+    border-radius: 0.2rem;
+}
+.imgAirforce2{
+    width: 5rem;
+    height:5.4rem;
+    display: none;
+    
+}
+.imgAirForce:hover .imgAirforce1{
+    display: none;
+    cursor: pointer;
+}
+.imgAirForce:hover .imgAirforce2{
+    display: block;
+    cursor: pointer;
+}
+.AirForce a{
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-left:0.5rem;
+    border: 1px solid black;
+    background-color: grey;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+    
+}
+.Jordan a{
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    margin-left:0.5rem;
+    border: 1px solid black;
+    background-color:gray;
+    border-radius: 2px;
+    color: white;
+    text-decoration: none;
+}
+.Jordan a:hover {
+    background-color:red;
+}
+.JordanImg img{
+    width: 5rem;
+    height:5.4rem;
+}
+.JordanImg{
+    width: 5.5rem;
+    height: 5.6rem;
+    border: 2px solid black;
+    border-radius: 0.2rem;
+}
+.JordanImg2{
+    width: 5rem;
+    height:5.4rem;
+    display: none;
+}
+.JordanImg:hover .JordanImg1{
+    display: none;
+    cursor: pointer;
+}
+.JordanImg:hover .JordanImg2{
+    display: block;
+    cursor: pointer;
+}
+#shopping-bag {
+    margin-right: auto;
+    margin-left: auto;
+    width: 5rem;
+    height: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.338);
+    color: azure;
+}
+.none{
+    display: none;
+}
+#Jordan{
+    width: 5vw;
+    height: 10vh;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+#AirForce{
+    width: 5vw;
+    height: 10vh;
+    border: 2px solid black;
+    border-radius: 5%;
+}
+#shopping-basket{
+    margin-top:10rem;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+.AirForce > a:hover{
+    background-color: red;
+}

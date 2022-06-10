@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c6d2413c18.js" crossorigin="anonymous"></script>  
+        <title>Shop</title>
+    </head>
+    <body>
+        <div class="cart">
+            <a href="#" onclick="bag()"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+        </div>
+        <div id="shop">
+            <div class="produit">
+                <div class="AirForce">
+                    <div class="imgAirForce">
+                        <div class="imgAirforce1">
+                            <img src="img/AirForce1.png" title="Air Force 1 Low White Supreme">
+                        </div>  
+                        <div class="imgAirforce2">  
+                            <img src="img/AirForce1-2.png">
+                        </div>
+                    </div>
+                    <a href="#" onclick="AirForceBuy()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy</a>
+                </div>
+                <div class="Jordan">
+                    <div class="JordanImg">
+                        <div class="JordanImg1">
+                            <img src="img/jordan1.png">
+                        </div>  
+                        <div class="JordanImg2">  
+                            <img src="img/jordan2.png">
+                        </div>
+                    </div>
+                    <a href="#" onclick="Jordan()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy</a>
+                </div>
+            </div>
+        </div>
+        <div id="shopping-basket">
+            <h1 id="empty">Panier Vide</h1>
+            <img src="img/AirForce1.png" id="AirForceShop" class="imgAirForce" >
+            <div id="counterAirForceBuy" class="AirForceShop"></div>
+            <div id="priceAirForceBuy" class="AirForceShop"></div>
+            <a href="#" onclick="lostAirForceBuy()" class="AirForceShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Retirer un Article</a>
+            <br>
+            <br>
+            <img id="Jordan" src="img/jordan1.png" class="JordanBuy">
+            <div id="counterJordan" class="JordanBuy"></div>
+            <div id="priceJordan" class="JordanBuy"></div> 
+            <a href="#" onclick="lostJordanBuy()" class="JordanBuy"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Retirer un Article</a>
+            <br>
+            <br>
+            <a href="#" onclick="lostall()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Tout vider</a>
+            <div id="price"></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -5,7 +5,7 @@ button.addEventListener("click", function(e) {
     ask();
     
 });
-function fetchApi(lat,lon) { //fetch avec l'utilisation de l'api la météo n'est obtenable que par la longitude et latitude
+function fetchApi(lat,lon) { //fetch avec l'utilisation de l'api la météo necessite d'avoir la longitude et latitude de la ville choisit
     fetch("https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid="+key+"&lang=FR") //requetes a l'api via fetch
     .then(response => response.json()) //recup de donné brut
     .then(data => {
