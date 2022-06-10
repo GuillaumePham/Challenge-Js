@@ -13,9 +13,12 @@ body, html {
 #shop{
     margin-right: auto;
     margin-left: auto;
-    width: 50vw;
+    width: 50rem;
     height: auto;
     background-color: white;
+}
+.cart{
+    display: inline;
 }
 
 .imgAirForce img{

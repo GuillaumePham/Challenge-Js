@@ -6,7 +6,7 @@
     </head>
     <body>
         <div class="cart">
-            <a href="#" onclick="bag()"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+            <a href="#" onclick="bag()"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Panier</a>
         </div>
         <div id="shop">
             <div class="produit">
@@ -30,25 +30,29 @@
                             <img src="img/jordan2.png">
                         </div>
                     </div>
-                    <a href="#" onclick="Jordan()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>  Buy</a>
+                    <a href="#" onclick="Jordan()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Buy</a>
                 </div>
             </div>
         </div>
         <div id="shopping-basket">
             <h1 id="empty">Panier Vide</h1>
             <img src="img/AirForce1.png" id="AirForceShop" class="imgAirForce" >
+            <br>
+            <br>
+            <a href="#" onclick="lostAirForceBuy()" class="AirForceShop">Retirer un Article</a>
             <div id="counterAirForceBuy" class="AirForceShop"></div>
             <div id="priceAirForceBuy" class="AirForceShop"></div>
-            <a href="#" onclick="lostAirForceBuy()" class="AirForceShop"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Retirer un Article</a>
             <br>
             <br>
             <img id="Jordan" src="img/jordan1.png" class="JordanBuy">
+            <br>
+            <br>
+            <a href="#" onclick="lostJordanBuy()" class="JordanBuy">Retirer un Article</a>
             <div id="counterJordan" class="JordanBuy"></div>
             <div id="priceJordan" class="JordanBuy"></div> 
-            <a href="#" onclick="lostJordanBuy()" class="JordanBuy"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Retirer un Article</a>
             <br>
             <br>
-            <a href="#" onclick="lostall()"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Tout vider</a>
+            <a href="#" onclick="lostall()">Tout vider</a>
             <div id="price"></div>
         </div>
         <script src="script.js"></script>
